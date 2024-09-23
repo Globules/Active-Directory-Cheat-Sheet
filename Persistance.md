@@ -10,6 +10,7 @@
 - [Right Abuse](#right-abuse)
 - [Security Descriptors](#security-descriptors)
 - [Remote Registery](#remote-registery)
+- [Tool list](#tool-list)
 
 ## Silver Ticket 
 
@@ -214,8 +215,34 @@ Retrieve local account hash
 
 Retrieve domain cached credentials
 ```
-	Get-RemoteCachedCredential -ComputerName <target> -Verbose
+    Get-RemoteCachedCredential -ComputerName <target> -Verbose
 ```
+
+## Tool list
+
+Rubeus : 
+
+- https://github.com/GhostPack/Rubeus
+
+Safetykatz :
+
+- https://github.com/GhostPack/SafetyKatz
+
+Mimikatz :
+
+- https://github.com/gentilkiwi/mimikatz/
+
+Invoke-Mimikatz :
+
+- https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1
+
+Race Toolkit :
+
+- https://github.com/samratashok/RACE
+
+Powerview :
+
+- https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
 
 
 [Back to the top](#persistance)
