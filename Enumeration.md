@@ -16,6 +16,7 @@
 - [CredSSP](#credssp)
 - [Shares](#shares)
 - [AD CS](#ad-cs)
+- [Forest](#forest)
 - [Azure](#azure)
 - [Network Monitoring](#network-monitoring)
 - [Tool list](#tool-list)
@@ -262,6 +263,45 @@ Remotly using Invoke-Command
 ```
     net view \\<servername>
 ```
+## Forest
+
+### AD-Module
+
+Map trust
+
+```
+    Get-ADTrust -Filter * 
+```
+
+Map all the trusts
+
+```
+    Get-ADTrust -Filter 'intraForest -ne $True' -Server (Get-ADForest).Name	
+```
+
+PAM trust enable
+
+```
+    Get-ADTrust -Filter {(ForestTransitive -eq $True) -and (SIDFilteringQuarantined -eq $False)}
+```
+
+Map external trust
+
+```
+    (Get-ADForest).Domains | %{Get-ADTrust -Filter '(intraForest-ne $True) -and (ForestTransitive -ne $True)' -Server $_}
+```
+
+Trust from another forest 
+
+```
+    Get-ADTrust -Filter * -Server <server>
+```
+
+### Powerview
+
+```
+    Get-ForestTrust
+```
 
 ## AD CS
 
@@ -315,6 +355,8 @@ Powerview :
 Ad-Module :
 
 - https://github.com/samratashok/ADModule
+
+
 
 
 [Back to top](#enumeration)
