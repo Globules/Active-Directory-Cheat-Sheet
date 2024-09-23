@@ -1,6 +1,19 @@
 # Privilege Escalation
 
-- [Silver Ticket](#silver-ticket)
+- [Service Running](#service-running)
+- [Kerberos](#kerberos)
+- [LAPS](#laps)
+- [gMSA](#gmsa)
+- [Deleguation](#deleguation)
+    - [Unconstrained Deleguation](#unconstrained-delegation)
+    - [Constrained Delegation](#constrained-delegation)
+    - [Ressource Based Constrained Delegation](#resource-based-constrained-delegation)
+    - [Constrained Delegation - Kerberos Only](#constrained-delegation---kerberos-only)
+    - [Constrained Delegation with Protocol Transition](#constrained-delegation-with-protocol-transition)
+- [DLL Hijacking](#dll-hijacking)
+- [Group Membership](#group-membership)
+- [Tool list](#tool-list)
+     
 
 ## Service running 
 
@@ -149,6 +162,7 @@ Use ADModule to read and DSInternals to compute NTLM hash
     $decodedpwd = ConvertFrom-ADManagedPasswordBlob $Passwordblob
     ConvertTo-NTHash -Password $decodedpwd.SecureCurrentPassword
 ```
+
 ## Deleguation
 
 ### Unconstrained Delegation
@@ -180,3 +194,5 @@ ActiveDirectory module
 
 
 ## Group Membership
+
+## Tool list
