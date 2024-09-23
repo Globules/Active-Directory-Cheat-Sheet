@@ -126,6 +126,7 @@ Any groups with SID>1000 :
 ```
     Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincipalName
 ```
+
 ## Group Information
 
 
@@ -137,12 +138,12 @@ Any groups with SID>1000 :
 
 ## User Information
 
- 
 ### AD Module
 
 ```
     Get-DomainUser -Domain <domain> | ?{$_.ObjectSid -eq '<SID>'}
 ```
+
 ## SPN
 
 ### AD Module
@@ -263,6 +264,7 @@ Remotly using Invoke-Command
 ```
     net view \\<servername>
 ```
+
 ## Forest
 
 ### AD-Module
@@ -341,7 +343,7 @@ TCPDump :
  ```
 
 
-## Tool list :
+## Tool list 
 
 Bloodhound Python :
 
@@ -355,8 +357,5 @@ Powerview :
 Ad-Module :
 
 - https://github.com/samratashok/ADModule
-
-
-
 
 [Back to top](#enumeration)
